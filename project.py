@@ -1,7 +1,9 @@
 import random
 
-gameOn = True
 count = 0
+
+def genRand():
+    return random.randint(1,6)
 
 def playGame():
     global count
@@ -11,15 +13,15 @@ def playGame():
         return
     random = genRand()
     if random == num:
+        print("Dice value: ", random)
         print("Correct")
         count +=5
     else:
+        print("Dice value: ", random)
         print("Wrong")
     
     print(f"Your score is: {count}")
 
-def genRand():
-    return random.randint(1,6)
 
 while True:
     playGame()
